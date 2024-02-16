@@ -31,5 +31,16 @@ public interface EmployeeMapper {
      * @return
      */
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+//
+//    /**
+//     * 启用或停用员工账号
+//     * @param employee
+//     */
+//    void updateStatus(Employee employee);
 
+    /**
+     * 根据id 动态修改属性
+     * @param employee
+     */
+    void update(Employee employee);
 }
