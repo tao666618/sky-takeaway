@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/admin/dish")
 @Api(tags = "菜品相关接口")
@@ -31,4 +33,11 @@ public interface DishService {
      * @return
      */
     PageResult pageQuery(DishPageQueryDTO dishPageQueryDTO);
+
+    /**
+     * 菜品批量删除
+     *
+     * @param ids
+     */
+    void deleteBatch(List<Long> ids);
 }
