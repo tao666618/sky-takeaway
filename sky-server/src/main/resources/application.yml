@@ -45,9 +45,17 @@ sky:
     #    admin-ttl: 7200000
     # 设置前端传递过来的令牌名称
     admin-token-name: token
+#   设置前端传递过来的微信令牌名称
+    user-secret-key:  wxToken
+
+    user-ttl: 10800000 #三小时
+    user-token-name: authentication #前端传递过来的令牌名称
   alioss:
     access-key-id: ${sky.alioss.access-key-id}
     access-key-secret: ${sky.alioss.access-key-secret}
     bucket-name: ${sky.alioss.bucket-name}
     endpoint: ${sky.alioss.endpoint}
+  wechat:
+    appid: ${sky.wechat.appid}
+    secret: ${sky.wechat.secret}
 
